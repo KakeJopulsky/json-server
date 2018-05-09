@@ -17,6 +17,5 @@ Create a .babelrc file within the root directory containing:
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
