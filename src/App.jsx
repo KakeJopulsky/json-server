@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import List from './List';
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +21,9 @@ class App extends React.Component {
   }
 
   search() {
-    console.log('Searched for: ' + this.state.search);
+    let pageNum = 1;
+    fetch(`http://localhost:3000/events?&_page=${pageNum}?category2=${this.state.search}&limit=10`)
+      .then(res =>res.json()).then(body => console.log(body))
     this.setState({
       search: ''
     })
@@ -28,10 +31,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         Welcome to HELL
         <Search search={this.search} input={this.inputText} inputValue={this.state.search}/>
-        
+        <List />
       </div>
     );
   }
