@@ -3,13 +3,68 @@ body {
 }
 
 .container {
+  display: absolute;
   margin: auto;
   height: 600px;
   width: 800px;
-  border: 1px solid black;
   text-align: center;
 }
 
 .search {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
+
+.list {
+  max-height: 600px;
+}
+
+table, th, td {
+  /* table-layout: auto; */
+  border-collapse: collapse;
+  border-spacing: 5px;
+  height: 20px;
+}
+
+th, td {
+  padding: 5px;
+  height: 20px;
+}
+
+tr {
+  text-align: center;
+  height: 20px;
+}
+
+th {
+  text-align: center;
+}
+
+.entry {
+  padding-bottom: 5px;
+  border-bottom: 1px solid grey;
+  font-size: 12px;
+}
+
+.location {
+  width: 50px;
+}
+
+.description {
+  width: 700px;
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pagination li {
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+
+.paginate .break a {
+  cursor: default;
+} 
